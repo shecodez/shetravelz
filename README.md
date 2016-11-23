@@ -1,2 +1,2 @@
 # shetravelz
-A travel website demo
+A travel webapp demo
