@@ -1,3 +1,91 @@
 //
    Created by Nicole J. Nobles on 11/22/2016.
 
+#footer
+    .container
+        .row
+            // about
+            .col-md-3
+                h3: a.logo(href='/') S&middot;HeTravelZ
+                p About S&middot;HeTravelZ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod itu.
+                ul
+                    li: a(href='#') Team
+                    li: a(href='#') Corporate Profile
+                    li: a(href='#') Careers
+
+            // recent posts
+            .col-md-3
+                h3 Recent Post
+                ul.recent-post
+                    li: a(href='#') Make Winter Memories
+                        img(src='http://placehold.it/48x48')
+                        br
+                        small Dec 1, 2016
+                    li: a(href='#') The Best Ski Resorts
+                        img(src='http://placehold.it/48x48')
+                        br
+                        small Dec 2, 2016
+                    li: a(href='#') Internation Phones
+                        img(src='http://placehold.it/48x48')
+                        br
+                        small Dec 4, 2016
+
+            // quick links
+            .col-md-3
+                h3 Quick Links
+                ul.quick-links
+                    li: a(href='#') About
+                    li: a(href='#') Explore
+                    li: a(href='#') Plan
+                    li: a(href='#') Blog
+                    li: a(href='#') Contact
+                    li: select(name='pop_destinations')
+                        option(value='#', selected='') Popular Destinations
+
+            // useful links
+            .col-md-3
+                h3 Useful Links
+                ul
+                    li: a(href='#') How-Tos...
+                    li: a(href='#') Printables
+                    li: a(href='#') Contribute
+                ul.app-banners
+                    li.ios_app: a(href='#', alt='iOS App')
+                    li.android: a(href='#', alt='Android')
+        .row
+            .col-sm-12
+                .social.line
+                    h2 Connect
+                        small &nbsp; with &nbsp;
+                        h2 Us
+                    ul.icon-list.list-inline
+                        li: a(href='#')
+                            i.fa.fa-facebook
+                        li: a(href='#')
+                            i.fa.fa-instagram
+                        li: a(href='#')
+                            i.fa.fa-twitter
+                        li: a(href='#')
+                            i.fa.fa-pinterest
+                        li: a(href='#')
+                            i.fa.fa-linkedin
+                        li: a(href='#')
+                            i.fa.fa-youtube
+        .row
+            .col-sm-6
+                h5.copy-legal #{new Date().getFullYear()} &copy;
+                    a(href='/')  S&middot;HeTravelZ
+                    |  All Rights Reserved.
+            .col-sm-6
+                h5.copy-legal.pull-right
+                    a(href='#') Privacy Policy
+                    |  |&nbsp;
+                    a(href='#') Terms of Use
+        .row
+            .col-xs-12
+                h5.dev-info Made with&nbsp;
+                    span.secondary
+                        i.fa.fa-heart
+                    |  by&nbsp;
+                    a(target='_blank', href='http://www.shecodez.com/') shecodez
+                    |  | NJN

@@ -25,7 +25,7 @@ config.keywords     = pkg.keywords;
 config.engine       = pkg.engines.node;
 
 config.port         = process.env.PORT  || 3000;
-config.ga           = process.env.GA    || 'google analytics key';
+config.ga_k         = process.env.GA    || 'google analytics key';
 
 /**
  * Database Configuration

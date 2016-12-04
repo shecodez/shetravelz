@@ -1,0 +1,435 @@
+@import 'variables.scss';
+//@import 'normalize.scss';
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+html,
+body {
+  margin: 0; padding: 0;
+  font-family: 'Oswald', sans-serif;
+  color: $primary;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+ol,ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  &:hover {
+    color: darken( $primary, 10% );
+  }
+}
+
+input, .txt-btn { padding: 1em 3em; }
+input {
+
+  &:focus {
+    outline: none;
+    color: $secondary;
+    border: 1px solid $primary;
+    box-shadow: 0 0 2px $primary;
+  }
+}
+.txt-btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .07em;
+  border: 2px solid $primary;
+  background-color: transparent;
+  color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    transition: all $transitionTime ease-in-out;
+  }
+}
+
+.primary { color: $primary; }
+.secondary { color: $secondary; }
+
+.content {
+  text-align: center;
+  color: $primary;
+
+  h1, p { margin: 0; }
+  h1 { font-size: 4em; }
+  p {
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+}
+
+.section {
+  //height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  padding: 3% 3% 0;
+  z-index: 999;
+
+  .nav-left, .nav-right {
+    display: inline;
+  }
+  .nav-right {
+    float: right;
+  }
+}
+
+#footer {
+  width: 100%;
+  background-color: $dark;
+
+  select {
+    margin-top: 1.5em;
+    border: 2px solid $primary;
+    padding: 0.5em;
+  }
+
+  small { color: $primary; }
+
+  h3 { margin: 8% 0; }
+
+  .recent-post {
+    img {float: left; margin-right: 15px; }
+    li { margin-bottom: 12px; }
+  }
+
+  .app-banners {
+    float: right;
+    width: 135px;
+    & li, a { padding: 12px; }
+
+    .ios_app {
+      background: url('https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg') no-repeat;
+      background-size: 135px 40px;
+    }
+    .android {
+      background: url('https://play.google.com/intl/en_us/badges/images/badge_new.png') no-repeat;
+      background-size: 135px 40px;
+    }
+  }
+
+  .line { border-bottom: 1px solid $secondary; }
+  .social {
+    //font-size: 3em;
+    padding: 0 7%;
+
+    h2, ul { display: inline-block; }
+    ul { float: right; }
+    h2 { text-transform: uppercase; }
+
+    .icon-list {
+      font-size: 1.5em;
+      li {
+        display: inline-block;
+        margin: 0.83em .2em;
+      }
+      a {
+        //color: $white;
+        &:hover {
+          .fa-facebook { color: $facebook; }
+          .fa-twitter { color: $twitter; }
+          .fa-pinterest { color: $pinterest; }
+          .fa-instagram { color: $instagram; }
+          .fa-linkedin { color: $linkedin; }
+          .fa-youtube { color: $youtube; }
+        }
+      }
+    }
+  }
+
+  .dev-info {
+    text-align: center;
+    font-weight: 300;
+  }
+}//#footer
+
+
+
+#intro-section {
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)), url('http://cdn.wallpapersafari.com/76/4/HXN13o.png') no-repeat center center;
+  background-size: cover;
+  p { color: $secondary; }
+
+}//#intro-section
+
+#foodie-section {
+  background: url(http://colegiosanagustinsm.16mb.com/fondo%20noticia%204.jpg) no-repeat center center;
+  img { margin-top: 20%; }
+  .text { text-align: left;}
+}//#foodie-section
+
+#feature-section {
+  background: url('http://www.phoclab.com/wp/wp-content/uploads/2016/09/IMGP6775-Autumn-at-DaigoJi.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  .overlay {
+    background: $white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+    transition: all $transitionTime ease-in-out;
+
+    &:hover {
+      background: transparent;
+      mix-blend-mode: normal;
+
+      .text, #top, #bottom, #left, #right {
+        color: $white;
+        border-color: $white;
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover { color: #00ccff; }
+        }
+      }
+    }
+  }
+  #top, #right, #bottom, #left {
+    position: absolute;
+  }
+  #left, #right {
+    top: 0%; bottom: 0%;
+    border: 1em solid $black;
+  }
+  #left { left: 0%; }
+  #right { right: 0%; }
+
+  #top, #bottom {
+    left: 0%; right: 0%;
+    border: 1em solid $black;
+  }
+  #top { top: 0; }
+  #bottom { bottom: 0; }
+
+  .frame { margin: 2.5em; }
+  .text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      font-size: 12vw;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-shadow: 8px 8px 20px $black;
+      transition: all $transitionTime ease;
+    }
+    h5 a { font-size: 2em; }
+  }
+}//#feature-section
+
+#spotlight-section{
+  .content {
+    width: 100%;
+    overflow: hidden;
+  }
+  ul { padding: 0; margin: 0; }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    & li {
+      padding: 0;
+      text-align: center;
+      width: 25%;
+      height: 100vh;
+      cursor: pointer;
+      flex-grow: 1;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+
+      h3 {
+        font-size: 5vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        opacity: 0.8;
+        line-height: 75vh;
+      }
+      p {
+        font-size: 2em;
+        font-weight: 300;
+        color: $white;
+      }
+
+      &.current-season {
+        box-shadow: inset 0 0 16px $secondary;
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+
+      &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        transition: all $transitionTime ease-in-out;
+        transform: scale(1.1);
+      }
+
+      &.active { width: 40%; }
+    }//li
+    //photos: https://livejapan.com/en/article/a0000283/
+    .winter{background: url('https://livejapan.com/public/article/detail/a/00/00/a0000283/free_html/h010026_010.jpg') no-repeat center center; background-size: cover; }
+    .spring{background: url('https://livejapan.com/public/article/detail/a/00/00/a0000283/free_html/h010026_004.jpg') no-repeat center center; background-size: cover; }
+    .summer{background: url('https://livejapan.com/public/article/detail/a/00/00/a0000283/free_html/h010026_007.jpg') no-repeat center center; background-size: cover; }
+    .autumn{background: url('https://livejapan.com/public/article/detail/a/00/00/a0000283/free_html/h010026_008.jpg') no-repeat center center; background-size: cover; }
+  }//wrapper
+
+}//#spotlight-section
+
+#community-section{
+  background-color: $dark;
+
+  .text {
+    margin: 8% 0;
+    text-align: left;
+    hr { width: 20%; border-color: $secondary;}
+    .sub { text-align: right; color: $secondary; }
+  }
+
+  .grid {
+
+    .figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 15px 0;
+    }
+
+    .hoverlay {
+      position: absolute;
+      overflow: hidden;
+      width: 80%;
+      height: 80%;
+      left: 10%;
+      top: 10%;
+
+      .caption {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        h2, p { opacity: 0; }
+      }
+
+      &:hover {
+        background-color: #fff;
+        opacity: 0.8;
+        transition: all $transitionTime ease-in-out;
+        h2, p { opacity: 1; transition: all $transitionTime ease-in-out; }
+      }
+    }
+  }//grid
+}//#comunity-section
+
+#contact-section {
+  background-color: $light;
+  .contact-info {
+    margin-bottom: 50px;
+    h1 {
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 6rem;
+    }
+    hr { border-color: $secondary; width: 20%; }
+  }
+  .subscribe-form {
+    p {
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    input { margin: 0 4px 4px 0;}
+  }
+}//#contact-section
+
+.play-btn {
+  position: fixed;
+  top: 45%;
+  right: 0%;
+}
+.chat-btn {
+  position: fixed;
+  left: 3%;
+  bottom: 3%;
+}
+.scroll-down i {
+  font-size: 3em;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+// Error Page
+.error-page {
+  background: url('../../public/images/over9000.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100vh;
+
+  .content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    flex-direction: column;
+    color: $white;
+
+    h1 {
+      font-weight: 900;
+      font-size: 12em;
+      opacity: 0.7;
+      margin-bottom: -10px;
+      //color: #ffff14;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 2em;
+      opacity: 0.9;
+    }
+    p {
+      font-weight: 900;
+      opacity: 0.8;
+      letter-spacing: .2rem;
+    }
+
+    a {
+      border: 1px solid $primary;
+      padding: 5px 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

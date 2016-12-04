@@ -4,5 +4,127 @@
 extends layout
 
 block content
-    .content
-        h1 S&middot;HeTravelZ
+    #main-content
+        .section#intro-section
+            .content
+                h1 S&middot;HeTravelZ
+                p Explore. Plan. Enjoy!
+                br
+                button.txt-btn Explore
+
+        .section#foodie-section
+            .content
+                .col-sm-12
+                    .food-img
+                        img.img-responsive(src='http://hungrysamuraihp.com/communities/9/000/002/021/629//images/12724120.png')
+                    .text
+                        h1 S&middot;HeEatZ
+                        p: a(href='#') Get your nom on!
+
+        .section#spotlight-section
+            .content
+                ul.wrapper.list-inline
+                    li.winter.current-season
+                        h3 Winter
+                        p Dec 1 - Feb 28
+                    li.spring
+                        h3 Spring
+                        p Mar 1 - May 31
+                    li.summer
+                        h3 Summer
+                        p Jun 1 - Aug 31
+                    li.autumn
+                        h3 Autumn
+                        p Sep 1 - Nov 31
+
+        .section#feature-section
+            .content.overlay
+                #top.frame
+                #right.frame
+                #bottom.frame
+                #left.frame
+                .text
+                    h1 Featured
+                    h5
+                        a(href='#') Reservations
+                        |  &middot;&nbsp;
+                        a(href='#') Destinations
+                        |  &middot;&nbsp;
+                        a(href='#') Accommodations
+
+        .section#community-section
+            .content
+                .col-md-4
+                    .text.col-xs-12
+                        h1: span.secondary Our
+                        h1 Community
+                        hr.secondary
+                        p.sub Driven by you, for you
+                        br
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor placerat enim et blandit. Etiam quis pretium augue. Aliquam non lacus eget augue mattis mollis.
+                .col-md-8
+                    .grid
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/people/1')
+                                .hoverlay
+                                    .caption
+                                        h2 Nancy Mason
+                                        p: a(href='#') Profile
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/sports/2')
+                                .hoverlay
+                                    .caption
+                                        h2 Haku Tanaka
+                                        p: a(href='#') Profile
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/people/9')
+                                .hoverlay
+                                    .caption
+                                        h2 Amy Dower
+                                        p: a(href='#') Profile
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/sports/1')
+                                .hoverlay
+                                    .caption
+                                        h2 Matt Franks
+                                        p: a(href='#') Profile
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/sports/5')
+                                .hoverlay
+                                    .caption
+                                        h2 Shila Rodgers
+                                        p: a(href='#') Profile
+                        .col-md-4.col-sm-6
+                            figure.figure
+                                img.img-responsive(src='http://lorempixel.com/200/200/sports/8')
+                                .hoverlay
+                                    .caption
+                                        h2 Tyler Briggs
+                                        p: a(href='#') Profile
+
+        .section#contact-section
+            .content
+                .contact-info.col-xs-12.col-md-4.col-md-offset-4
+                    h1.animated.fadeIn Contact Us
+                    hr
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    br
+                    button.txt-btn Contact
+                .subscribe-form.col-xs-12.col-md-6.col-md-offset-3
+                    p.animated.pulse Subscribe to our newsletter!
+                    form(method='#')
+                        input(type='text', placeholder='Name')
+                        input(type='email', placeholder='E-mail')
+                        button.txt-btn(type='submit') Subscribe
+
+    button.play-btn
+        i.material-icons play_circle_outline
+    button.chat-btn
+        i.material-icons chat
+    .scroll-down
+        i.material-icons.animated.bounce keyboard_arrow_down
