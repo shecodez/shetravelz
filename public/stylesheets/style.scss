@@ -1,7 +1,7 @@
 @import 'variables.scss';
 //@import 'normalize.scss';
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
 html,
 body {
@@ -390,47 +390,31 @@ input {
 
 
 // Error Page
+
 .error-page {
   //../../public/images/over9000.gif
-  background: url('http://i.imgur.com/C5X6bis.gif');
-  background-repeat: no-repeat;
+  background: url('http://i.imgur.com/C5X6bis.gif') no-repeat center center;
   background-size: cover;
-  background-position: 50% 50%;
-  width: 100%;
-  height: 100vh;
 
-  .content {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 100%;
-    flex-direction: column;
+  h1 {
+    font-weight: 900;
+    font-size: 12em;
+    opacity: 0.7;
     color: $white;
-
-    h1 {
-      font-weight: 900;
-      font-size: 12em;
-      opacity: 0.7;
-      margin-bottom: -10px;
-      //color: #ffff14;
-    }
-    h2 {
-      font-weight: 700;
-      font-size: 2em;
-      opacity: 0.9;
-    }
-    p {
-      font-weight: 900;
-      opacity: 0.8;
-      letter-spacing: .2rem;
-    }
-
-    a {
-      border: 1px solid $primary;
-      padding: 5px 10px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 2em;
+    opacity: 0.8;
+    color: $white ;
+  }
+  p {
+    color: $white;
+  }
+  a {
+    border: 2px solid $primary;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }

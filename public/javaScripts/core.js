@@ -8,7 +8,8 @@ var $doc = $(document);
 var docH = $doc.height();
 
 var $playBtn = $('.play-btn');
-var btnPos = $playBtn.offset().top + $playBtn.outerHeight(true);
+if ($playBtn.length)
+    var btnPos = $playBtn.offset().top + $playBtn.outerHeight(true);
 
 var $footer = $('#footer');
 var footerPos = $footer.position().top;
