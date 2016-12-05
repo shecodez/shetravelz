@@ -1,0 +1,199 @@
+#header {
+  position: fixed;
+  width: 100%;
+  padding: 55px 60px 0;
+  z-index: 99; }
+  #header .nav-left, #header .nav-right {
+    display: inline; }
+    #header .nav-left button, #header .nav-right button {
+      line-height: 30px; }
+  #header .nav-right {
+    float: right; }
+    #header .nav-right button {
+      margin-right: 15px; }
+  #header .btn-toggle-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    #header .btn-toggle-menu .icon, #header .btn-toggle-menu .text {
+      display: inline-block;
+      vertical-align: middle; }
+    #header .btn-toggle-menu .text {
+      margin-left: .85em;
+      font-size: 1.4em;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #fff; }
+    #header .btn-toggle-menu .line {
+      background-color: #fff;
+      height: 3px;
+      width: 45px;
+      margin-bottom: 7px;
+      transition: all 800ms ease-in-out; }
+    #header .btn-toggle-menu .line-center {
+      position: relative;
+      margin-left: -15px;
+      transition: all 800ms ease-in-out; }
+      #header .btn-toggle-menu .line-center:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: all 800ms ease-in-out;
+        z-index: 999; }
+    #header .btn-toggle-menu:hover .line {
+      margin-left: -5px; }
+  #header .btn-toggle-menu.open .icon .line-center {
+    margin-left: -15px;
+    transform: rotate(45deg);
+    height: 3px;
+    width: 45px; }
+    #header .btn-toggle-menu.open .icon .line-center::after {
+      transform: rotate(-90deg); }
+  #header .btn-toggle-menu.open .icon .line-outer {
+    display: none; }
+  #header .btn-toggle-menu.open.btn-toggle-menu .text {
+    display: none; }
+  #header .btn-toggle-search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative; }
+    #header .btn-toggle-search .circle {
+      position: relative;
+      background-color: #000;
+      height: 24px;
+      width: 24px;
+      border: 3.5px solid #fff;
+      border-radius: 100%;
+      transition: all 800ms ease-in-out;
+      z-index: 1; }
+    #header .btn-toggle-search .handle {
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      top: 1.5px;
+      right: 7px;
+      height: 36px;
+      width: 3.5px;
+      transform: rotate(-45deg); }
+      #header .btn-toggle-search .handle:after {
+        content: '';
+        display: block;
+        background-color: #fff;
+        height: 36px;
+        width: 3.5px;
+        transition: all 800ms ease-in-out; }
+  #header .btn-toggle-search.open .circle {
+    transform: scale(0.03);
+    background: #fff;
+    border-color: #fff; }
+  #header .btn-toggle-search.open .handle:after {
+    transform-origin: center;
+    transform: rotate(90deg); }
+  #header .btn-toggle-signin {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    #header .btn-toggle-signin .text {
+      font-size: 1.4em;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #fff; }
+      #header .btn-toggle-signin .text:after {
+        content: 'Sign In'; }
+  #header .btn-toggle-signin.open .text {
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #fff; }
+    #header .btn-toggle-signin.open .text:after {
+      content: 'Cancel'; }
+
+.overlay.open {
+  display: block; }
+  .overlay.open .nav-toggle-menu.open {
+    display: block; }
+  .overlay.open .search-toggle-menu.open {
+    display: block; }
+  .overlay.open .signin-signup-menu.open {
+    display: block; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 15px solid #000;
+  display: none;
+  background-color: #333;
+  z-index: 9;
+  overflow-x: hidden;
+  transition: all 800ms ease-in-out; }
+
+.nav-toggle-menu {
+  display: none;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; }
+  .nav-toggle-menu i {
+    font-size: 1.5em; }
+
+.search-toggle-menu {
+  display: none;
+  position: relative;
+  text-align: center;
+  top: 50%; }
+  .search-toggle-menu input {
+    font-size: 3.5em;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid #fff; }
+  .search-toggle-menu button {
+    font-size: 2.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff; }
+
+.signin-signup-menu {
+  display: none;
+  position: relative;
+  text-align: center;
+  top: 17%;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0 30px 125px -5px #000; }
+  .signin-signup-menu .txt-input {
+    width: 80%; }
+  .signin-signup-menu .bg-gif {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: url("https://media.giphy.com/media/CBISaDGmXdmBG/giphy.gif") no-repeat center center;
+    background-size: cover; }
+  .signin-signup-menu ul {
+    bottom: 0;
+    position: absolute;
+    z-index: 1; }
+  .signin-signup-menu .auth-form {
+    padding: 10% 10% 0; }
+
+/*# sourceMappingURL=header.css.map */

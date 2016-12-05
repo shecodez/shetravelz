@@ -84,3 +84,39 @@ $(window).on('mousemove click', function(e) {
 });
 
 animate();
+
+// toggle menus
+var navBarClosed = true;
+var searchClosed = true;
+var signInClosed = true;
+
+// toggle navigation
+$('.btn-toggle-menu').on('click', function() {
+    if (searchClosed && signInClosed) {
+        $(this).toggleClass('open');
+        $('.overlay').toggleClass('open');
+        $('.nav-toggle-menu').toggleClass('open');
+        navBarClosed = !navBarClosed;
+    }
+});
+
+// toggle search
+$('.btn-toggle-search').on('click', function() {
+    if (navBarClosed && signInClosed) {
+        $(this).toggleClass('open');
+        $('.overlay').toggleClass('open');
+        $('.search-toggle-menu').toggleClass('open');
+        searchClosed = !searchClosed;
+    }
+});
+
+// toggle SignIn/SignUp
+$('.btn-toggle-signin').on('click', function() {
+    if (searchClosed && navBarClosed) {
+        $(this).toggleClass('open');
+        $('.overlay').toggleClass('open');
+        $('.signin-signup-menu').toggleClass('open');
+        signInClosed = !signInClosed;
+    }
+});
+

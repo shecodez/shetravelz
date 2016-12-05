@@ -2,12 +2,78 @@
    Created by Nicole J. Nobles on 11/22/2016.
 
 #header
-   nav
-      .nav-left
-         button
-            i.material-icons menu
-      .nav-right
-         button
-            i.material-icons search
-         button
-            i.material-icons lock_outline
+    nav
+        .nav-left
+            button.btn-toggle-menu
+                span.sr-only Toggle Navigation
+                .icon
+                    .line.line-outer
+                    .line.line-center
+                    .line.line-outer
+                span.text menu
+
+        .nav-right
+            button.btn-toggle-search
+                span.sr-only Search
+                .icon
+                    .circle
+                    .handle
+            button.btn-toggle-signin
+                span.sr-only Sign In
+                span.text
+.overlay
+    //Full Screen NavMenu
+    .nav-toggle-menu
+        nav
+            ul.list-inline
+                li: a(href='#'): i.fa.fa-home
+                li: a(href='#') About
+                li: a(href='#') Explore
+                li: a(href='#') Plan
+                li: a(href='#') Blog
+                li: a(href='#') Contact
+
+    //Full Screen Search
+    .search-toggle-menu
+        form.search-form
+            input(type='search', value='', placeholder='Search...')
+            button(type='button')
+                span.fa.fa-microphone
+            button(type='button')
+                span.fa.fa-search
+
+    //Modal SignIn/SignUp
+    .signin-signup-menu.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+        .bg-gif
+            ul.nav.nav-tabs
+                li.active: a(href='#signin', data-toggle='tab') Sign In
+                li: a(href='#signup', data-toggle='tab') Sign Up
+        .tab-content
+            .tab-pane#signin.active
+                form.auth-form(action='#')
+                    .form-group
+                        input.txt-input(type='email', placeholder='Email')
+                    .form-group
+                        input.txt-input(type='password', placeholder='Password')
+                    .form-group
+                        .checkbox
+                            label
+                                input(type='checkbox')
+                                span
+                                |  Remember Me
+                    .form-group
+                        button.txt-btn(type='#') Sign In
+                    p: a(href='#') Forgot Password?
+
+            .tab-pane#signup
+                form.auth-form(action='#')
+                    .form-group
+                        input.txt-input(type='text', placeholder='Name')
+                    .form-group
+                        input.txt-input(type='email', placeholder='Email')
+                    .form-group
+                        input.txt-input(type='password', placeholder='Password')
+                    br
+                    .form-group
+                        button.txt-btn(type='#') Sign Up
+                    p: a(href='#') Terms & Conditions
