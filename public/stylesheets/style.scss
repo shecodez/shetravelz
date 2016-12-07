@@ -78,20 +78,6 @@ a {
   justify-content: center;
 }
 
-/*#header {
-  position: fixed;
-  width: 100%;
-  padding: 3% 3% 0;
-  z-index: 999;
-
-  .nav-left, .nav-right {
-    display: inline;
-  }
-  .nav-right {
-    float: right;
-  }
-}*/
-
 #footer {
   width: 100%;
   background-color: $dark;
@@ -160,8 +146,6 @@ a {
     font-weight: 300;
   }
 }//#footer
-
-
 
 #intro-section {
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('http://cdn.wallpapersafari.com/76/4/HXN13o.png') no-repeat center center;
