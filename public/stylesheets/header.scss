@@ -180,7 +180,8 @@
   width: 100%;
   border: 15px solid $black;
   display: none;
-  background-color: $blue;
+  //background-color: $white;
+  background-color: rgba(0,0,0, 0.8);
   z-index: 9;
   overflow-x: hidden;
   transition: all $shortTransitionTime ease-in-out;
@@ -209,8 +210,8 @@
     background: transparent;
     border: none;
     outline: none;
-    color: white;
-    border-bottom: 1px solid $white;
+    color: $secondary;
+    border-bottom: 1px solid $primary;
   }
   button {
     font-size: 2.5em;
@@ -218,7 +219,7 @@
     border: none;
     cursor: pointer;
     outline: none;
-    color: $white;
+    color: $secondary;
   }
 }//.search-toggle-menu
 

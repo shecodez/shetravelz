@@ -141,7 +141,7 @@
   width: 100%;
   border: 15px solid #000;
   display: none;
-  background-color: #0F2D71;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 9;
   overflow-x: hidden;
   transition: all 500ms ease-in-out; }
@@ -168,15 +168,15 @@
     background: transparent;
     border: none;
     outline: none;
-    color: white;
-    border-bottom: 1px solid #fff; }
+    color: #036564;
+    border-bottom: 1px solid #6F694E; }
   .search-toggle-menu button {
     font-size: 2.5em;
     background: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-    color: #fff; }
+    color: #036564; }
 
 .signin-signup-menu {
   display: none;
