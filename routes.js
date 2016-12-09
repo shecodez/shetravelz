@@ -15,22 +15,12 @@ router.get('/', function (req, res) {
 });
 
 /**
- * GET /about
- * Render About page
+ * GET /restful
+ * Render Restful page
  */
 
-router.get('/about', function (req, res) {
-    res.render('about');
-});
-
-
-/**
- * GET /auth
- * Render #SignIn/SignUp page
- */
-
-router.get('/auth', function (req, res) {
-    res.render('auth');
+router.get('/restful', function (req, res) {
+    res.render('restful');
 });
 
 module.exports = router;

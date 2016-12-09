@@ -1,0 +1,59 @@
+#footer {
+  width: 100%;
+  background-color: #3c373e; }
+  #footer select {
+    margin-top: 1.5em;
+    border: 2px solid #6F694E;
+    padding: 0.5em; }
+  #footer small {
+    color: #6F694E; }
+  #footer h3 {
+    margin: 8% 0; }
+  #footer .recent-post img {
+    float: left;
+    margin-right: 15px; }
+  #footer .recent-post li {
+    margin-bottom: 12px; }
+  #footer .app-banners {
+    float: right;
+    width: 135px; }
+    #footer .app-banners li, #footer .app-banners a {
+      padding: 12px; }
+    #footer .app-banners .ios_app {
+      background: url("https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg") no-repeat;
+      background-size: 135px 40px; }
+    #footer .app-banners .android {
+      background: url("https://play.google.com/intl/en_us/badges/images/badge_new.png") no-repeat;
+      background-size: 135px 40px; }
+  #footer .line {
+    border-bottom: 1px solid #036564; }
+  #footer .social {
+    padding: 0 7%; }
+    #footer .social h2, #footer .social ul {
+      display: inline-block; }
+    #footer .social ul {
+      float: right; }
+    #footer .social h2 {
+      text-transform: uppercase; }
+    #footer .social .icon-list {
+      font-size: 1.5em; }
+      #footer .social .icon-list li {
+        display: inline-block;
+        margin: 0.83em .2em; }
+      #footer .social .icon-list a:hover .fa-facebook {
+        color: #3b5998; }
+      #footer .social .icon-list a:hover .fa-twitter {
+        color: #00aced; }
+      #footer .social .icon-list a:hover .fa-pinterest {
+        color: #cb2027; }
+      #footer .social .icon-list a:hover .fa-instagram {
+        color: #bc2a8d; }
+      #footer .social .icon-list a:hover .fa-linkedin {
+        color: #007bb6; }
+      #footer .social .icon-list a:hover .fa-youtube {
+        color: #bb0000; }
+  #footer .dev-info {
+    text-align: center;
+    font-weight: 300; }
+
+/*# sourceMappingURL=footer.css.map */

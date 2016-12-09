@@ -3,6 +3,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 @import "header.scss";
+@import "footer.scss";
 
 html,
 body {
@@ -25,7 +26,7 @@ ol,ul {
 
 a {
   color: $secondary;
-  text-decoration: none;
+  text-decoration: none !important;
   &:hover {
     color: darken( $primary, 10% );
   }
@@ -77,75 +78,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-
-#footer {
-  width: 100%;
-  background-color: $dark;
-
-  select {
-    margin-top: 1.5em;
-    border: 2px solid $primary;
-    padding: 0.5em;
-  }
-
-  small { color: $primary; }
-
-  h3 { margin: 8% 0; }
-
-  .recent-post {
-    img {float: left; margin-right: 15px; }
-    li { margin-bottom: 12px; }
-  }
-
-  .app-banners {
-    float: right;
-    width: 135px;
-    & li, a { padding: 12px; }
-
-    .ios_app {
-      background: url('https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg') no-repeat;
-      background-size: 135px 40px;
-    }
-    .android {
-      background: url('https://play.google.com/intl/en_us/badges/images/badge_new.png') no-repeat;
-      background-size: 135px 40px;
-    }
-  }
-
-  .line { border-bottom: 1px solid $secondary; }
-  .social {
-    //font-size: 3em;
-    padding: 0 7%;
-
-    h2, ul { display: inline-block; }
-    ul { float: right; }
-    h2 { text-transform: uppercase; }
-
-    .icon-list {
-      font-size: 1.5em;
-      li {
-        display: inline-block;
-        margin: 0.83em .2em;
-      }
-      a {
-        //color: $white;
-        &:hover {
-          .fa-facebook { color: $facebook; }
-          .fa-twitter { color: $twitter; }
-          .fa-pinterest { color: $pinterest; }
-          .fa-instagram { color: $instagram; }
-          .fa-linkedin { color: $linkedin; }
-          .fa-youtube { color: $youtube; }
-        }
-      }
-    }
-  }
-
-  .dev-info {
-    text-align: center;
-    font-weight: 300;
-  }
-}//#footer
 
 #intro-section {
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('http://cdn.wallpapersafari.com/76/4/HXN13o.png') no-repeat center center;
@@ -227,6 +159,7 @@ a {
     overflow: hidden;
   }
   ul { padding: 0; margin: 0; }
+  .reveal { display: none; }
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -269,6 +202,7 @@ a {
       }
 
       &.active { width: 40%; }
+
     }//li
     //photos: https://livejapan.com/en/article/a0000283/
     .winter{background: url('https://livejapan.com/public/article/detail/a/00/00/a0000283/free_html/h010026_010.jpg') no-repeat center center; background-size: cover; }
@@ -332,7 +266,7 @@ a {
   }//grid
 }//#comunity-section
 
-#contact-section {
+#contact {
   background-color: $light;
   .contact-info {
     margin-bottom: 50px;

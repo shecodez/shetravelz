@@ -7,27 +7,26 @@ var winH = $win.height();
 var $doc = $(document);
 var docH = $doc.height();
 
-var $playBtn = $('.play-btn');
+/*var $playBtn = $('.play-btn');
 if ($playBtn.length)
-    var btnPos = $playBtn.offset().top + $playBtn.outerHeight(true);
+    var btnPos = $playBtn.offset().top + $playBtn.outerHeight(true);*/
 
 var $footer = $('#footer');
 var footerPos = $footer.position().top;
 
 $win.on("scroll", function () {
     var scrollTop = $(this).scrollTop();
-    var scrollPos = docH - (scrollTop + winH);
 
     /*console.log(scrollTop);
     console.log("doc h "+docH);
     console.log("win h "+winH);*/
 
     // remove/show play button only for #intro-section
-    if ((scrollTop + btnPos) >= winH ) {
+    /*if ((scrollTop + btnPos) >= winH ) {
         $playBtn.hide();
     } else {
         $playBtn.show();
-    }
+    }*/
 
     // remove/show scrollDown icon if end/more content
     if ((scrollTop + winH) >= footerPos ) {
@@ -42,9 +41,21 @@ $win.on("scroll", function () {
     footerPos = $footer.position().top;
 });
 
+$('[data-toggle="popover"]').popover({
+    trigger: 'hover'
+});
+
 var $spotlightWrapper = $('.wrapper li');
 $spotlightWrapper.on('click', function() {
     $(this).toggleClass('active');
+    $(this).siblings().removeClass('active');
+
+    $(this).siblings().find('.reveal').hide();
+    if($(this).hasClass('active')) {
+        if($(this).hasClass('current-season')) {
+            $(this).find('.reveal').show();
+        }
+    }
 });
 
 /*$playBtn.on('click', function() {

@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+#footer {
+  width: 100%;
+  background-color: $dark;
+
+  select {
+    margin-top: 1.5em;
+    border: 2px solid $primary;
+    padding: 0.5em;
+  }
+
+  small { color: $primary; }
+
+  h3 { margin: 8% 0; }
+
+  .recent-post {
+    img {float: left; margin-right: 15px; max-width: 48px; max-height: 48px; }
+    li { margin-bottom: 12px; }
+  }
+
+  .app-banners {
+    float: right;
+    width: 135px;
+    & li, a { padding: 12px; cursor: pointer; }
+
+    .ios_app {
+      background: url('https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg') no-repeat;
+      background-size: 135px 40px;
+    }
+    .android {
+      background: url('https://play.google.com/intl/en_us/badges/images/badge_new.png') no-repeat;
+      background-size: 135px 40px;
+    }
+  }
+
+  .line { border-bottom: 1px solid $secondary; }
+  .social {
+    //font-size: 3em;
+    padding: 0 7%;
+
+    h2, ul { display: inline-block; }
+    ul { float: right; }
+    h2 { text-transform: uppercase; }
+
+    .icon-list {
+      font-size: 1.5em;
+      li {
+        display: inline-block;
+        margin: 0.83em .2em;
+      }
+      a {
+        //color: $white;
+        &:hover {
+          .fa-facebook { color: $facebook; }
+          .fa-twitter { color: $twitter; }
+          .fa-pinterest { color: $pinterest; }
+          .fa-instagram { color: $instagram; }
+          .fa-linkedin { color: $linkedin; }
+          .fa-youtube { color: $youtube; }
+        }
+      }
+    }
+  }
+
+  .dev-info {
+    text-align: center;
+    font-weight: 300;
+  }
+}//#footer

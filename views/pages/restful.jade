@@ -1,0 +1,99 @@
+//
+   Created by Nicole J. Nobles on 12/7/2016.
+
+extends layout
+
+block content
+    style.
+        .restful {
+            margin: 100px 0 50px 0;
+        }
+        .restful h1 {
+            font-size: 7em;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            background: url("http://grandvacations.co.in/images/banner4.jpg");
+            padding: 50px 0;
+        }
+
+    // ----- Links -----------------------------------------------//
+    .container.text-center
+        .restful
+            h1 Restful
+
+        .well
+            section#header-links
+            h2 Header > Main Links
+            p: ul
+                li Home     : /
+                li About    : /about
+                li Explore  : /interactive-map
+                li Plan     : /trips/new
+                li Blog     : blog.shetravelz.com
+                li Contact  : /#contact
+
+        .well
+            section#intro-links
+                h2 Intro Links
+                p EXPLORE : /interactive-map
+
+        .well
+            section#reservation-links
+                h2 Food Blog Links
+                p Get your nom on! : /reservations
+
+        .well
+            section#spotlight-links
+                h2 SpotLight Links
+                p blog.shetravelz.com/posts/spotlight?start=
+                    // currentSeason.startDate
+                    span 12-10-2016
+                    | &end=
+                    // today.toISOString()
+                    span today
+
+        .well
+            section#featured-links
+                h2 Featured Links
+                p: ul
+                    li Reservations : /featured#reservations
+                        p Noteworthy food spots
+                    li Destinations : /featured#destinations
+                        p Noteworthy locations
+                    li Explorations : /featured#explorations
+                        p Noteworthy Trips to take
+
+        .well
+            section#community-links
+                h2 Community Links
+                p User Image : /profiles/{user.name}
+
+        .well
+            section#contact-links
+                h2 Contact Links
+                p CONTACT : (fullscreen) contact form
+
+        .well
+            section#footer-links
+                h2 Footer Links
+                p: ul
+                    li about :
+                        ul
+                            li /about#team
+                            li /about#corporate-profile
+                            li /careers.shetravelz.com
+
+                    li Recent Post : blog.shetravelz/posts/{post.title}
+                    li Quick Links : see
+                        span: a(href='#header-links')  Header > Main Links
+                    li Useful Links :
+                        ul
+                            li /how-tos
+                            li /printables
+                            li /community#contribute
+                            li link to app store
+                            li link to google play
+                    li Social Media Links
+                    li Privacy Policy | Terms of Use : /privacy & /terms
+

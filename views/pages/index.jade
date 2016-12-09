@@ -8,7 +8,15 @@ block content
         .section#intro-section
             .content
                 h1 S&middot;HeTravelZ
-                p Explore. Plan. Enjoy!
+                //p Explore. Plan. Enjoy!
+                p
+                    a(href='#', tabindex='0', role='button', data-toggle='popover', data-trigger='focus', title='Explore Japan.', data-placement='left', data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra leo vel elit dapibus vehicula.") Explore
+                    | .&nbsp
+                    a(href='#', tabindex='0', role='button', data-toggle='popover', data-trigger='focus', title='Plan your Trip.', data-placement='top', data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra leo vel elit dapibus vehicula.") Plan
+                    | .&nbsp
+                    a(href='#', tabindex='0', role='button', data-toggle='popover', data-trigger='focus', title='Enjoy it all!', data-placement='right', data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra leo vel elit dapibus vehicula.") Enjoy
+                    | !
+
                 br
                 button.txt-btn Explore
 
@@ -19,22 +27,30 @@ block content
                         img.img-responsive(src='http://hungrysamuraihp.com/communities/9/000/002/021/629//images/12724120.png')
                     .text
                         h1 S&middot;HeEatZ
-                        p: a(href='#') Get your nom on!
+                        p: a(href='/restful#reservation-links') Get your nom on!
 
         .section#spotlight-section
             .content
                 ul.wrapper.list-inline
                     li.winter.current-season
                         h3 Winter
+                        .reveal
+                            a.txt-btn(href='/restful/#spotlight-links') View
                         p Dec 1 - Feb 28
                     li.spring
                         h3 Spring
+                        .reveal
+                            a.txt-btn(href='/restful/#spotlight-links') View
                         p Mar 1 - May 31
                     li.summer
                         h3 Summer
+                        .reveal
+                            a.txt-btn(href='/restful/#spotlight-links') View
                         p Jun 1 - Aug 31
                     li.autumn
                         h3 Autumn
+                        .reveal
+                            a.txt-btn(href='/restful/#spotlight-links') View
                         p Sep 1 - Nov 31
 
         .section#feature-section
@@ -46,11 +62,11 @@ block content
                 .text
                     h1 Featured
                     h5
-                        a(href='#') Reservations
+                        a(href='/restful#featured-links') Reservations
                         |  &middot;&nbsp;
-                        a(href='#') Destinations
+                        a(href='/restful#featured-links') Destinations
                         |  &middot;&nbsp;
-                        a(href='#') Accommodations
+                        a(href='/restful#featured-links') Explorations
 
         .section#community-section
             .content
@@ -70,47 +86,47 @@ block content
                                 .hoverlay
                                     .caption
                                         h2 Nancy Mason
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
                         .col-md-4.col-sm-6
                             figure.figure
                                 img.img-responsive(src='http://lorempixel.com/200/200/sports/2')
                                 .hoverlay
                                     .caption
                                         h2 Haku Tanaka
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
                         .col-md-4.col-sm-6
                             figure.figure
                                 img.img-responsive(src='http://lorempixel.com/200/200/people/9')
                                 .hoverlay
                                     .caption
                                         h2 Amy Dower
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
                         .col-md-4.col-sm-6
                             figure.figure
                                 img.img-responsive(src='http://lorempixel.com/200/200/sports/1')
                                 .hoverlay
                                     .caption
                                         h2 Matt Franks
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
                         .col-md-4.col-sm-6
                             figure.figure
                                 img.img-responsive(src='http://lorempixel.com/200/200/sports/5')
                                 .hoverlay
                                     .caption
                                         h2 Shila Rodgers
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
                         .col-md-4.col-sm-6
                             figure.figure
                                 img.img-responsive(src='http://lorempixel.com/200/200/sports/8')
                                 .hoverlay
                                     .caption
                                         h2 Tyler Briggs
-                                        p: a(href='#') Profile
+                                        p: a(href='/restful#community-links') Profile
 
-        .section#contact-section
+        .section#contact
             .content
                 .contact-info.col-xs-12.col-md-4.col-md-offset-4
-                    h1.animated.fadeIn Contact Us
+                    h1 Contact Us
                     hr
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     br
@@ -122,7 +138,7 @@ block content
                         input.txt-input(type='email', placeholder='E-mail')
                         button.txt-btn(type='submit') Subscribe
 
-    button.play-btn
+    //button.play-btn
         i.material-icons play_circle_outline
     button.chat-btn
         i.material-icons chat
