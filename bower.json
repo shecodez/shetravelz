@@ -6,9 +6,7 @@
   "description": "A travel webapp demo",
   "license": "MIT",
   "dependencies": {
-    "angular": "~1.5",
-    "angular-animate": "~1.5.0",
-    "angular-material": "~1.0.5",
+   
     "jquery": "~3.1.1",
     "bootstrap": "~3.3.7",
     "fullpage.js": "~2.8.9",
